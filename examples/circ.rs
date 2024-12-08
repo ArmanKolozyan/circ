@@ -234,7 +234,19 @@ fn main() {
             panic!("Missing feature: c");
         }
     };
+
+    // serializing the IR
+    let ir_text = circ::ir::term::text::serialize_computations(&cs);
+
+    // saving to a file
+    let output_file = "ir_output.circir";
+    std::fs::write(output_file, ir_text).expect("Unable to write IR to file");
+    println!("Intermediate Representation saved to {}", output_file);
+
+
     println!("Running IR optimizations");
+
+    
     let cs = match mode {
         Mode::Opt => opt(
             cs,
