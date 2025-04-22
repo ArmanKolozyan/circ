@@ -1,0 +1,61 @@
+(computations 
+
+(main (computation 
+(metadata
+  (parties  prover verifier)
+
+  (inputs
+    (return (bv 8))
+    (x (bv 8) (party 0))
+  )
+  (commitments
+  )
+)
+(precompute (
+)(
+ (return (bv 8))
+)
+
+  (declare
+ (
+  (x (bv 8))
+ )
+ (let
+  (
+   ('0 ((uext 1) ((extract 7 1) x)))
+   ('1 ((uext 1) ((extract 7 1) '0)))
+   ('2 ((uext 1) ((extract 7 1) '1)))
+   ('3 ((uext 1) ((extract 7 1) '2)))
+   ('4 ((uext 1) ((extract 7 1) '3)))
+   ('5 ((uext 1) ((extract 7 1) '4)))
+  )
+  
+(tuple (bvadd x (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (ite (not (= x #x00)) #x01 #x00) (ite (not (= '0 #x00)) #x01 #x00)) (ite (not (= '1 #x00)) #x01 #x00)) (ite (not (= '2 #x00)) #x01 #x00)) (ite (not (= '3 #x00)) #x01 #x00)) (ite (not (= '4 #x00)) #x01 #x00)) (ite (not (= '5 #x00)) #x01 #x00)) (ite (not (= ((uext 1) ((extract 7 1) '5)) #x00)) #x01 #x00)))))
+))
+
+
+  (declare
+ (
+  (return (bv 8))
+  (x (bv 8))
+ )
+ (let
+  (
+   ('0 ((uext 1) ((extract 7 1) x)))
+   ('1 ((uext 1) ((extract 7 1) '0)))
+   ('2 ((uext 1) ((extract 7 1) '1)))
+   ('3 ((uext 1) ((extract 7 1) '2)))
+   ('4 ((uext 1) ((extract 7 1) '3)))
+   ('5 ((uext 1) ((extract 7 1) '4)))
+  )
+  
+(= (bvadd x (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (ite (not (= x #x00)) #x01 #x00) (ite (not (= '0 #x00)) #x01 #x00)) (ite (not (= '1 #x00)) #x01 #x00)) (ite (not (= '2 #x00)) #x01 #x00)) (ite (not (= '3 #x00)) #x01 #x00)) (ite (not (= '4 #x00)) #x01 #x00)) (ite (not (= '5 #x00)) #x01 #x00)) (ite (not (= ((uext 1) ((extract 7 1) '5)) #x00)) #x01 #x00))) return))
+)
+
+
+)
+
+)
+
+
+)

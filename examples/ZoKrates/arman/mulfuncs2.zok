@@ -1,0 +1,7 @@
+def add(field a, field b) -> field:
+    return a + b
+
+def main(private field a, private field b) -> field:
+    field sum = add(a, b)
+    field sum2 = add(b, a)
+    return sum + sum2

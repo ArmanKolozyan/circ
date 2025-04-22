@@ -1,0 +1,4 @@
+def main(private field a, private field b) -> bool:
+    assert(a != b)
+
+    return true

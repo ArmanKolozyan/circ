@@ -1,0 +1,45 @@
+(computations 
+
+(main (computation 
+(metadata
+  (parties  prover verifier)
+
+  (inputs
+    (return (bv 8))
+    (x (bv 8) (party 0))
+    (y (bv 8) (party 0))
+  )
+  (commitments
+  )
+)
+(precompute (
+)(
+ (return (bv 8))
+)
+
+  (declare
+ (
+  (y (bv 8))
+  (x (bv 8))
+ )
+(tuple (bvmul x y)))
+
+
+)
+
+
+  (declare
+ (
+  (return (bv 8))
+  (y (bv 8))
+  (x (bv 8))
+ )
+(= (bvmul x y) return))
+
+
+)
+
+)
+
+
+)

@@ -1,0 +1,45 @@
+(computations 
+
+(main (computation 
+(metadata
+  (parties  prover verifier)
+
+  (inputs
+    (return bool)
+    (b bool (party 0))
+    (a bool (party 0))
+  )
+  (commitments
+  )
+)
+(precompute (
+)(
+ (return bool)
+)
+
+  (declare
+ (
+  (b bool)
+  (a bool)
+ )
+(tuple (and a b)))
+
+
+)
+
+
+  (declare
+ (
+  (return bool)
+  (b bool)
+  (a bool)
+ )
+(= (and a b) return))
+
+
+)
+
+)
+
+
+)

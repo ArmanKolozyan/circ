@@ -1,0 +1,2 @@
+def main(field[2] a) -> field[2]:
+    return a

@@ -1,0 +1,10 @@
+def main(field[2][2] m) -> field {
+    field sum = 0;
+    // two nested compile‑time loops over the 2×2 matrix
+    for u32 i in 0..2 {
+        for u32 j in 0..2 {
+            sum = sum + m[i][j];
+        }
+    }
+    return sum;
+}

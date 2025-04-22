@@ -1,0 +1,80 @@
+(computations 
+
+(main (computation 
+(metadata
+  (parties  prover verifier)
+
+  (inputs
+    (return (bv 16))
+    (x (bv 16) (party 0))
+  )
+  (commitments
+  )
+)
+(precompute (
+)(
+ (return (bv 16))
+)
+
+  (declare
+ (
+  (x (bv 16))
+ )
+ (let
+  (
+   ('0 ((uext 1) ((extract 15 1) x)))
+   ('1 ((uext 1) ((extract 15 1) '0)))
+   ('2 ((uext 1) ((extract 15 1) '1)))
+   ('3 ((uext 1) ((extract 15 1) '2)))
+   ('4 ((uext 1) ((extract 15 1) '3)))
+   ('5 ((uext 1) ((extract 15 1) '4)))
+   ('6 ((uext 1) ((extract 15 1) '5)))
+   ('7 ((uext 1) ((extract 15 1) '6)))
+   ('8 ((uext 1) ((extract 15 1) '7)))
+   ('9 ((uext 1) ((extract 15 1) '8)))
+   ('10 ((uext 1) ((extract 15 1) '9)))
+   ('11 ((uext 1) ((extract 15 1) '10)))
+   ('12 ((uext 1) ((extract 15 1) '11)))
+   ('13 ((uext 1) ((extract 15 1) '12)))
+  )
+  
+(tuple (bvadd x (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (ite (not (= x #x0000)) #x0001 #x0000) (ite (not (= '0 #x0000)) #x0001 #x0000)) (ite (not (= '1 #x0000)) #x0001 #x0000)) (ite (not (= '2 #x0000)) #x0001 #x0000)) (ite (not (= '3 #x0000)) #x0001 #x0000)) (ite (not (= '4 #x0000)) #x0001 #x0000)) (ite (not (= '5 #x0000)) #x0001 #x0000)) (ite (not (= '6 #x0000)) #x0001 #x0000)) (ite (not (= '7 #x0000)) #x0001 #x0000)) (ite (not (= '8 #x0000)) #x0001 #x0000)) (ite (not (= '9 #x0000)) #x0001 #x0000)) (ite (not (= '10 #x0000)) #x0001 #x0000)) (ite (not (= '11 #x0000)) #x0001 #x0000)) (ite (not (= '12 #x0000)) #x0001 #x0000)) (ite (not (= '13 #x0000)) #x0001 #x0000)) (ite (not (= ((uext 1) ((extract 15 1) '13)) #x0000)) #x0001 #x0000)))))
+)
+
+
+)
+
+
+  (declare
+ (
+  (return (bv 16))
+  (x (bv 16))
+ )
+ (let
+  (
+   ('0 ((uext 1) ((extract 15 1) x)))
+   ('1 ((uext 1) ((extract 15 1) '0)))
+   ('2 ((uext 1) ((extract 15 1) '1)))
+   ('3 ((uext 1) ((extract 15 1) '2)))
+   ('4 ((uext 1) ((extract 15 1) '3)))
+   ('5 ((uext 1) ((extract 15 1) '4)))
+   ('6 ((uext 1) ((extract 15 1) '5)))
+   ('7 ((uext 1) ((extract 15 1) '6)))
+   ('8 ((uext 1) ((extract 15 1) '7)))
+   ('9 ((uext 1) ((extract 15 1) '8)))
+   ('10 ((uext 1) ((extract 15 1) '9)))
+   ('11 ((uext 1) ((extract 15 1) '10)))
+   ('12 ((uext 1) ((extract 15 1) '11)))
+   ('13 ((uext 1) ((extract 15 1) '12)))
+  )
+  
+(= (bvadd x (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (bvadd (ite (not (= x #x0000)) #x0001 #x0000) (ite (not (= '0 #x0000)) #x0001 #x0000)) (ite (not (= '1 #x0000)) #x0001 #x0000)) (ite (not (= '2 #x0000)) #x0001 #x0000)) (ite (not (= '3 #x0000)) #x0001 #x0000)) (ite (not (= '4 #x0000)) #x0001 #x0000)) (ite (not (= '5 #x0000)) #x0001 #x0000)) (ite (not (= '6 #x0000)) #x0001 #x0000)) (ite (not (= '7 #x0000)) #x0001 #x0000)) (ite (not (= '8 #x0000)) #x0001 #x0000)) (ite (not (= '9 #x0000)) #x0001 #x0000)) (ite (not (= '10 #x0000)) #x0001 #x0000)) (ite (not (= '11 #x0000)) #x0001 #x0000)) (ite (not (= '12 #x0000)) #x0001 #x0000)) (ite (not (= '13 #x0000)) #x0001 #x0000)) (ite (not (= ((uext 1) ((extract 15 1) '13)) #x0000)) #x0001 #x0000))) return))
+)
+
+
+)
+
+)
+
+
+)

@@ -1,0 +1,42 @@
+(computations 
+
+(main (computation 
+(metadata
+  (parties  prover verifier)
+
+  (inputs
+    (return (bv 32))
+    (x (bv 32) (party 0))
+  )
+  (commitments
+  )
+)
+(precompute (
+)(
+ (return (bv 32))
+)
+
+  (declare
+ (
+  (x (bv 32))
+ )
+(tuple (bvmul x #x00000002)))
+
+
+)
+
+
+  (declare
+ (
+  (return (bv 32))
+  (x (bv 32))
+ )
+(= (bvmul x #x00000002) return))
+
+
+)
+
+)
+
+
+)
