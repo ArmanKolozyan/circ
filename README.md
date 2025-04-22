@@ -4,13 +4,16 @@ CirC is a *compiler infrastructure* which supports compilation from
 high-level (stateful, uniform) languages to (state-free, non-uniform,
 existentially quantified) circuits.
 
-It's been used to compile {C, ZoKrates, Circom} to {SMT, ILP, R1CS,
+It's been used to compile {C, ZoKrates} to {SMT, ILP, R1CS,
 MPC}, but it probably also applies to any statically type high-level
 language and constant-time/FHE.
 
 If you want to learn more about CirC, see our
 [paper](https://circ.zk.fyi) or
 [slides](https://cs.stanford.edu/~aozdemir/docs/circ.pdf).
+
+This is the second implementation of CirC.
+The first was done in Haskell and can be found [here](https://github.com/circify/compiler).
 
 ## Requirements
 
@@ -22,6 +25,10 @@ You'll also need the COIN-OR CBC solver. On Arch linux, this is `coin-or-cbc`.
 On Ubuntu `coinor-cbc` and `coinor-libcbc-dev`.
 
 You'll also need a stable Rust compiler.
+
+## Quickstart
+
+For an example of doing ZKP compilation, look [here](./doc/zkp.md).
 
 ## Architecture
 

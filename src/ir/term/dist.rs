@@ -267,7 +267,7 @@ impl rand::distributions::Distribution<BitVector> for UniformBitVector {
 
 pub(crate) struct UniformFieldV<'a>(&'a FieldT);
 
-impl<'a> rand::distributions::Distribution<FieldV> for UniformFieldV<'a> {
+impl rand::distributions::Distribution<FieldV> for UniformFieldV<'_> {
     fn sample<R: rand::Rng + ?Sized>(&self, rng: &mut R) -> FieldV {
         self.0.random_v(rng)
     }
@@ -275,7 +275,7 @@ impl<'a> rand::distributions::Distribution<FieldV> for UniformFieldV<'a> {
 
 pub(crate) struct UniformValue<'a>(pub &'a Sort);
 
-impl<'a> rand::distributions::Distribution<Value> for UniformValue<'a> {
+impl rand::distributions::Distribution<Value> for UniformValue<'_> {
     fn sample<R: rand::Rng + ?Sized>(&self, rng: &mut R) -> Value {
         match self.0 {
             Sort::Bool => Value::Bool(rng.gen()),
@@ -313,7 +313,9 @@ impl rand::distributions::Distribution<Term> for FixedSizeDist {
     }
 }
 
+/// Test helpers for dist.
 #[cfg(test)]
+/// Utilities for random testing.
 pub mod test {
     use super::*;
 
@@ -322,7 +324,9 @@ pub mod test {
     use rand::distributions::Distribution;
     use rand::SeedableRng;
 
+    /// PureBool struct for testing.
     #[derive(Clone, Debug)]
+    /// A random term with only Boolean descendents and values for its variables.
     pub struct PureBool(pub Term, pub FxHashMap<String, Value>);
 
     impl Arbitrary for PureBool {
@@ -352,7 +356,9 @@ pub mod test {
         }
     }
 
+    /// ArbitraryTerm struct for testing.
     #[derive(Clone)]
+    /// A random term and values for its variables.
     pub struct ArbitraryTerm(pub Term);
 
     impl std::fmt::Debug for ArbitraryTerm {
